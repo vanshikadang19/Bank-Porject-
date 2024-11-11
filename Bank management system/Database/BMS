@@ -1,0 +1,165 @@
+-- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
+--
+-- Host: localhost    Database: bankmanagementsystem
+-- ------------------------------------------------------
+-- Server version	8.0.37
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `bank`
+--
+
+DROP TABLE IF EXISTS `bank`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `bank` (
+  `pin` varchar(10) DEFAULT NULL,
+  `date` varchar(50) DEFAULT NULL,
+  `type` varchar(50) DEFAULT NULL,
+  `amount` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `bank`
+--
+
+LOCK TABLES `bank` WRITE;
+/*!40000 ALTER TABLE `bank` DISABLE KEYS */;
+INSERT INTO `bank` VALUES ('','Wed Jun 19 22:48:07 IST 2024','Deposit','1000'),('','Wed Jun 19 23:17:41 IST 2024','Deposit','500000'),('0000','Wed Jun 19 23:42:15 IST 2024','Deposit','10000'),('','Fri Jun 21 20:56:24 IST 2024','withdraw','500'),('','Fri Jun 21 20:56:34 IST 2024','Deposit','5000'),('','Fri Jun 21 20:56:48 IST 2024','Withdrawal','500'),('','Fri Jun 21 20:59:06 IST 2024','withdraw','10000'),('1617','Sat Jun 22 11:52:41 IST 2024','Deposit','500000'),('1617','Sat Jun 22 11:52:58 IST 2024','Withdrawal','10000'),('1617','Sat Jun 22 11:53:20 IST 2024','withdraw','10000'),('1617','Sat Jun 22 12:04:46 IST 2024','Deposit','10000'),('1617','Sat Jun 22 12:04:56 IST 2024','Withdrawal','1000'),('8433','Sat Jun 22 14:57:16 IST 2024','Deposit','10000'),('8433','Sat Jun 22 14:57:25 IST 2024','Withdrawal','1000'),('0000','Sat Jun 22 15:00:52 IST 2024','Deposit','10000'),('0000','Sat Jun 22 15:01:02 IST 2024','Withdrawal','1000'),('0000','Mon Jun 24 10:56:37 IST 2024','Deposit','5000'),('0000','Mon Jun 24 10:56:44 IST 2024','Withdrawal','1000'),('0000','Mon Jun 24 11:57:44 IST 2024','Deposit','5000'),('0000','Mon Jun 24 11:57:52 IST 2024','Withdrawal','1000'),('1234','Mon Jun 24 18:29:41 IST 2024','Deposit','10000'),('1234','Mon Jun 24 18:29:59 IST 2024','Withdrawal','1000'),('1234','Mon Jun 24 18:30:23 IST 2024','Deposit','5000'),('1234','Mon Jun 24 18:31:18 IST 2024','withdraw','2000'),('1234','Sun Jul 21 22:03:07 IST 2024','Deposit','10000'),('1234','Sun Jul 21 22:03:15 IST 2024','Withdrawal','2000');
+/*!40000 ALTER TABLE `bank` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `login`
+--
+
+DROP TABLE IF EXISTS `login`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `login` (
+  `formno` varchar(20) DEFAULT NULL,
+  `cardnumber` varchar(25) DEFAULT NULL,
+  `pinnumber` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `login`
+--
+
+LOCK TABLES `login` WRITE;
+/*!40000 ALTER TABLE `login` DISABLE KEYS */;
+INSERT INTO `login` VALUES ('','2803373504093600000000','43921000'),('','5040935993973661','22222'),('9399','5040935985248936','1617'),('4104','5040936063686621','8433'),('4101','5040936011246281','0000'),('2538','5040936063114642','1234'),('4443','5040935974904823','1234');
+/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `signup`
+--
+
+DROP TABLE IF EXISTS `signup`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `signup` (
+  `formno` varchar(20) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  `father_name` varchar(20) DEFAULT NULL,
+  `dob` varchar(20) DEFAULT NULL,
+  `gender` varchar(20) DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `marital` varchar(20) DEFAULT NULL,
+  `address` varchar(40) DEFAULT NULL,
+  `city` varchar(25) DEFAULT NULL,
+  `pincode` varchar(20) DEFAULT NULL,
+  `state` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `signup`
+--
+
+LOCK TABLES `signup` WRITE;
+/*!40000 ALTER TABLE `signup` DISABLE KEYS */;
+INSERT INTO `signup` VALUES ('3257','vanshika dang ','nitin ','Dec 19, 2002','Unmarried','vanshikadang19@gmail.com','null','hatte nagar','latur','413512','maharashtra'),('3257','vanshika dang ','nitin ','Dec 19, 2002','Unmarried','vanshikadang19@gmail.com','null','hatte nagar','latur','413512','maharashtra'),('3257','vanshika dang ','nitin ','Dec 19, 2002','Unmarried','vanshikadang19@gmail.com','null','hatte nagar','latur','413512','maharashtra'),('3257','vanshika dang ','nitin ','Dec 19, 2002','Unmarried','vanshikadang19@gmail.com','null','hatte nagar','latur','413512','maharashtra'),('3257','vanshika dang ','nitin ','Dec 19, 2002','Unmarried','vanshikadang19@gmail.com','null','hatte nagar','latur','413512','maharashtra'),('3257','vanshika dang ','nitin ','Dec 19, 2002','Unmarried','vanshikadang19@gmail.com','null','hatte nagar','latur','413512','maharashtra'),('3257','vanshika dang ','nitin ','Dec 19, 2002','Unmarried','vanshikadang19@gmail.com','null','hatte nagar','latur','413512','maharashtra'),('1616','jyoti dang','kamlesh thawani','Jun 5, 2024','Married','jyoti14@gmail.com','null','hatte nagar','latur','413512','maharashtra'),('5269','vanshika','','','Female','','null','','','',''),('5269','vanshika','','','Female','','null','','','',''),('3405','samarth','','','Unmarried','','null','','','',''),('1420','vanshika','nitin','Jun 4, 2024','Female','vanshika@19gmail.com','Unmarried','hatte nagar','latur','413512','maharashtra'),('301','vanshiak','','','null','','null','','','',''),('6833','samarth','nitin','Jun 11, 2024','Male','samarth@27gmail.com','Unmarried','hatte nagar','latur','413512','maharashtra'),('2580','Prasad','nandkishor','Jan 18, 1998','Male','prasad@19gmail.com','Unmarried','nanded city','latur','413512','maharashtra'),('6328','balaji ','sharad','Jun 5, 2024','Male','balaji@gmail.com','Unmarried','hatte nagar','latur','413512','maharashtra'),('3301','ronak','','','null','','null','','','',''),('3223','omkar ','dhondiram','Mar 4, 2004','Male','omkar@4gmail.com','Unmarried','hatte nagar','latur','413512','maharashtra'),('9399','Vanshika Dang','Nitin','Jun 3, 2014','Female','vanshika19@gmail.com','Unmarried','hatte nagar latur','latur','413512','maharashtra'),('4104','saswd','kdmd3','232332','Male','samdmxmi@gmicml','Unmarried','emcw','icmwec','nfmfiii4','neicmi'),('4101','jyoti','kamlesh','Jun 5, 2024','Female','jyoti14@gmail.com','Married','hatte nagar','latur','413512','maharashtra'),('2538','Samarth dang ','nitin','Jun 13, 2024','Male','Samarth@gmail.com','Unmarried','hatte nagar latur','latur','413512','maharashtra'),('4443','radhika','qwerrt','Jul 18, 2024','Female','hbahndkjsnkjsndj','Unmarried','jsncoisjdoisjo','inIJNIaios','kNDIUSJDI','nidnsaoidj');
+/*!40000 ALTER TABLE `signup` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `signupthree`
+--
+
+DROP TABLE IF EXISTS `signupthree`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `signupthree` (
+  `formno` varchar(20) DEFAULT NULL,
+  `accountType` varchar(100) DEFAULT NULL,
+  `cardnumber` varchar(50) DEFAULT NULL,
+  `pinnumber` varchar(20) DEFAULT NULL,
+  `facility` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `signupthree`
+--
+
+LOCK TABLES `signupthree` WRITE;
+/*!40000 ALTER TABLE `signupthree` DISABLE KEYS */;
+INSERT INTO `signupthree` VALUES ('','Saving Account','42881575504093600000000','56701000','ATM Card'),('','Saving Account','2803373504093600000000','43921000','ATM Card'),('','Saving Account','5040935993973661','22222','ATM Card Mobile Banking'),('9399','Saving Account','5040935985248936','1617','ATM Card Email & SMS Alert Cheque Book'),('4104','Saving Account','5040936063686621','8433',' Mobile Banking'),('4101','Current Account','5040936011246281','0000','ATM Card Email & SMS Alert Cheque Book E Statement'),('2538','Saving Account','5040936063114642','1234','ATM Card Email & SMS Alert Cheque Book E Statement'),('4443','Saving Account','5040935974904823','1234','ATM Card Cheque Book E Statement');
+/*!40000 ALTER TABLE `signupthree` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `signuptwo`
+--
+
+DROP TABLE IF EXISTS `signuptwo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `signuptwo` (
+  `formno` varchar(20) DEFAULT NULL,
+  `sreligion` varchar(20) DEFAULT NULL,
+  `scategory` varchar(20) DEFAULT NULL,
+  `sincome` varchar(20) DEFAULT NULL,
+  `seducational` varchar(20) DEFAULT NULL,
+  `soccupation` varchar(30) DEFAULT NULL,
+  `span` varchar(20) DEFAULT NULL,
+  `aadhar` varchar(20) DEFAULT NULL,
+  `seniorcitizen` varchar(20) DEFAULT NULL,
+  `existingaccount` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `signuptwo`
+--
+
+LOCK TABLES `signuptwo` WRITE;
+/*!40000 ALTER TABLE `signuptwo` DISABLE KEYS */;
+INSERT INTO `signuptwo` VALUES ('0','Hindu','General','< 2,50,000','Post-Graduate','Student','hdteuwjwij','6789474839303','no','No'),('6833','Hindu','General','<1,50,000','Graduate','Salaried','bduygdiuhdiuw',' jchsiuchsiu','no','No'),('2580','Hindu','General','Upto 10,00,000','Non-Graduate','Salaried','giyugasiudhuaso','jhasiuhsauo','yes','No'),('6328','Hindu','General','< 2,50,000','Post-Graduate','Salaried','fhoidjqpdjpq','bwudhwoqdjo0wi','yes','No'),('3301','Hindu','General','null','Non-Graduate','Salaried','gukg8y87y','','null','null'),('3301','Hindu','General','null','Non-Graduate','Salaried','gukg8y87y','','null','null'),('3301','Hindu','General','null','Non-Graduate','Salaried','gukg8y87y','','null','null'),('3301','Hindu','General','null','Non-Graduate','Salaried','gukg8y87y','','null','null'),('3301','Hindu','General','null','Non-Graduate','Salaried','gukg8y87y','','null','null'),('3223','Hindu','General','< 2,50,000','Graduate','Salaried','giuhui','uhif','no','No'),('3223','Hindu','General','< 2,50,000','Graduate','Salaried','giuhui','uhif','no','No'),('','Hindu','General','null','Non-Graduate','Salaried','','','null','null'),('','Hindu','General','null','Non-Graduate','Salaried','','','null','null'),('','Hindu','General','null','Non-Graduate','Salaried','','','null','null'),('','Hindu','General','null','Non-Graduate','Salaried','ded','','null','null'),('','Hindu','General','null','Non-Graduate','Salaried','ijei','','null','null'),('','Hindu','General','null','Non-Graduate','Salaried','iuw4984uw','','null','null'),('9399','Hindu','General','<1,50,000','Post-Graduate','Salaried','gshjiwywjsls','ndikwmahgsy','no','No'),('4104','Hindu','General','<1,50,000','Non-Graduate','Business','lf4o3o4,2343434','43422','yes','No'),('4101','Hindu','General','<1,50,000','Others','Salaried','nhdnfuhdnuhcd','lkmcokfecoife','no','No'),('2538','Hindu','General','<3,00,000','Non-Graduate','Salaried','hsfsydudjd','bdjdid','no','No'),('4443','Hindu','General','<5,00,000','Non-Graduate','Salaried','KUAHRIUAHEROUI','JSHERIEHIU','no','No');
+/*!40000 ALTER TABLE `signuptwo` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-11-11 19:52:38
